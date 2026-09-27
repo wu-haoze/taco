@@ -1,0 +1,5 @@
+# Compound moves for kissat_noelim.csv: settings that only mean something together, so the tuner also tries each one as
+# a single step. One move per line, as comma-separated option=value pairs.
+
+# forcephase=1 forces every decision to the value of `phase`; forcing "always false" needs both options at once.
+forcephase=1, phase=0

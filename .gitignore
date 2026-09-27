@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+
+# unpacked benchmarks (the repository has benchmarks.tar.xz)
+taco_sat/benchmarks/
+taco_nnv/benchmarks/NAP/
+taco_nnv/benchmarks/AltLoops/
+
+# tools built by tools/build.sh
+taco_sat/tools/kissat/
+taco_sat/tools/march_cu_constant/march_cu
+taco_sat/tools/march_cu_constant/*.o
+taco_nnv/tools/Marabou/
+
+# cubes and raw run outputs
+taco_sat/cubes/
+taco_sat/results/
+taco_nnv/results/
+work/

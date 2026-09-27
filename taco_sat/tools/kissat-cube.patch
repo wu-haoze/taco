@@ -1,0 +1,92 @@
+--- a/src/application.c
++++ b/src/application.c
+@@ -23,6 +23,7 @@
+ struct application {
+   kissat *solver;
+   const char *input_path;
++  const char *cube;
+   const char *output_path;
+ #ifndef NPROOFS
+   const char *proof_path;
+@@ -533,6 +534,16 @@
+                application->output_path, arg);
+       application->output_path = arg;
+     }
++	else if (!strcmp (arg, "-c")) {
++
++		if (++i == argc)
++			ERROR ("argument to '-c' missing (try '-h')");
++		arg = argv[i];
++		if (application->cube)
++			ERROR ("multiple cube options '%s' and '%s' (try '-h')",
++				   application->output_path, arg);
++		application->cube = arg;
++    }
+ #ifdef NOPTIONS
+     else if (arg[0] == '-' && !arg[2] &&
+              (arg[1] == 'l' || arg[1] == 'q' || arg[1] == 's' ||
+@@ -642,7 +653,7 @@
+   kissat_message (solver, "  %s", file.path);
+   kissat_line (solver);
+   const char *error = kissat_parse_dimacs (
+-      solver, application->strict, &file, &lineno, &application->max_var);
++      solver, application->strict, &file, &lineno, &application->max_var, application->cube);
+   kissat_close_file (&file);
+   if (error)
+     ERROR ("%s:%" PRIu64 ": parse error: %s", file.path, lineno, error);
+--- a/src/parse.c
++++ b/src/parse.c
+@@ -432,12 +432,40 @@
+ 
+ const char *
+ kissat_parse_dimacs (kissat * solver,
+-		     strictness strict,
+-		     file * file, uint64_t * lineno_ptr, int *max_var_ptr)
++					 strictness strict,
++					 file * file, uint64_t * lineno_ptr, int *max_var_ptr, const char *cube)
+ {
+   START (parse);
+   const char *res;
+   res = parse_dimacs (solver, file, strict, lineno_ptr, max_var_ptr);
++  if (cube) {
++	const char *ptr = cube;
++	while (*ptr) {
++		int lit = 0;
++		int sign = 1;
++		if (*ptr == '-') {
++			sign = -1;
++			ptr++;
++		}
++		while (isdigit(*ptr)) {
++			lit = lit * 10 + (*ptr - '0');
++			ptr++;
++		}
++		lit *= sign;
++		printf("Add literal: %d\n", lit);
++		if ( lit != 0 ) {
++			kissat_add(solver, lit);
++			kissat_add(solver, 0);
++		}
++		if (*ptr == ',') {
++			ptr++;
++		} else if (*ptr == '0') {
++			break;
++		}
++	}
++  }
++
++
+   if (!solver->inconsistent)
+     kissat_defrag_watches (solver);
+   STOP (parse);
+--- a/src/parse.h
++++ b/src/parse.h
+@@ -14,6 +14,7 @@
+ struct kissat;
+ 
+ const char *kissat_parse_dimacs (struct kissat *, strictness, file *,
+-                                 uint64_t *linenoptr, int *max_var_ptr);
++                                 uint64_t *linenoptr, int *max_var_ptr, 
++                                 const char *cube);
+ 
+ #endif

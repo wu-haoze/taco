@@ -1,0 +1,12 @@
+# Strategies of kissat_noelim.csv that are the same run under two names. One rule per line:
+#
+#   <option>: <condition> | <condition> ...
+#
+# The option has no effect whenever any condition holds; a condition is option=value pairs, comma-separated, that must
+# all hold. The tuner treats strategies that differ only in such options as one strategy.
+
+# Target phases are only used when the phase is not forced, and (with target=1) only in stable mode.
+target: stable=0 | forcephase=1
+
+# bumpreasons only matters when variables are bumped at all.
+bumpreasons: bump=0

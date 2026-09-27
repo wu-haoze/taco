@@ -1,0 +1,9 @@
+# Mode options of kissat_noelim.csv: options whose default mixes two pure settings. One option per line:
+#
+#   <option>: <pure value> | <pure value>
+#
+# The tuner compares the pure settings with each other and starts its search from the winner when it clearly wins.
+# A value marked * is understated by short runs, so it may win on a smaller gap.
+
+# kissat's default stable=1 alternates focused mode (stable=0) and stable mode (stable=2).
+stable: 0 | 2*

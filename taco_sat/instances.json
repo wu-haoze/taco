@@ -1,0 +1,157 @@
+[
+ {
+  "name": "9dlx_vliw_at_b_iq8",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/9dlx_vliw_at_b_iq8.cnf"
+ },
+ {
+  "name": "9dlx_vliw_at_b_iq9",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/9dlx_vliw_at_b_iq9.cnf"
+ },
+ {
+  "name": "AProVE07-25",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/AProVE07-25.cnf"
+ },
+ {
+  "name": "dated-5-19-u",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/dated-5-19-u.cnf"
+ },
+ {
+  "name": "eq.atree.braun.12",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/eq.atree.braun.12.cnf"
+ },
+ {
+  "name": "eq.atree.braun.13",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/eq.atree.braun.13.cnf"
+ },
+ {
+  "name": "gss-24-s100",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/gss-24-s100.cnf"
+ },
+ {
+  "name": "gss-26-s100",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/gss-26-s100.cnf"
+ },
+ {
+  "name": "gus-md5-14",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/gus-md5-14.cnf"
+ },
+ {
+  "name": "ndhf_xits_09_UNS",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/ndhf_xits_09_UNS.cnf"
+ },
+ {
+  "name": "rbcl_xits_09_UNK",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/rbcl_xits_09_UNK.cnf"
+ },
+ {
+  "name": "rpoc_xits_09_UNS",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/rpoc_xits_09_UNS.cnf"
+ },
+ {
+  "name": "total-10-17-u",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/total-10-17-u.cnf"
+ },
+ {
+  "name": "total-5-15-u",
+  "family": "cnc",
+  "cnf": "benchmarks/cnc/total-5-15-u.cnf"
+ },
+ {
+  "name": "cruxmiter32seed0",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed0.cnf"
+ },
+ {
+  "name": "cruxmiter32seed1",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed1.cnf"
+ },
+ {
+  "name": "cruxmiter32seed2",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed2.cnf"
+ },
+ {
+  "name": "cruxmiter32seed3",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed3.cnf"
+ },
+ {
+  "name": "cruxmiter32seed4",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed4.cnf"
+ },
+ {
+  "name": "cruxmiter32seed5",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed5.cnf"
+ },
+ {
+  "name": "cruxmiter32seed6",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed6.cnf"
+ },
+ {
+  "name": "cruxmiter32seed7",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed7.cnf"
+ },
+ {
+  "name": "cruxmiter32seed8",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed8.cnf"
+ },
+ {
+  "name": "cruxmiter32seed9",
+  "family": "cruxmiter",
+  "cnf": "benchmarks/cruxmiter/cruxmiter32seed9.cnf"
+ },
+ {
+  "name": "WS_400_24_90_10.apx_1_DS_ST",
+  "family": "sc",
+  "cnf": "benchmarks/sc/WS_400_24_90_10.apx_1_DS_ST.cnf"
+ },
+ {
+  "name": "WS_400_32_90_10.apx_1_DC_AD",
+  "family": "sc",
+  "cnf": "benchmarks/sc/WS_400_32_90_10.apx_1_DC_AD.cnf"
+ },
+ {
+  "name": "WS_500_32_50_10.apx_2_DC_AD",
+  "family": "sc",
+  "cnf": "benchmarks/sc/WS_500_32_50_10.apx_2_DC_AD.cnf"
+ },
+ {
+  "name": "grs_192_256",
+  "family": "sc",
+  "cnf": "benchmarks/sc/grs_192_256.cnf"
+ },
+ {
+  "name": "multiplier_14bits__miter_14",
+  "family": "sc",
+  "cnf": "benchmarks/sc/multiplier_14bits__miter_14.cnf"
+ },
+ {
+  "name": "php15_mixed_15percent_blocked",
+  "family": "sc",
+  "cnf": "benchmarks/sc/php15_mixed_15percent_blocked.cnf"
+ },
+ {
+  "name": "sin_depth_miter_1",
+  "family": "sc",
+  "cnf": "benchmarks/sc/sin_depth_miter_1.cnf"
+ }
+]
